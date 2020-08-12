@@ -1,0 +1,145 @@
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: white;
+  background-image: url(../imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  background-color: #1c0404;
+}
+
+.fondo{
+  background-color: black;
+}
+
+.tjustify{
+  text-align: justify;
+}
+
+.active {
+  background-color: #444441;
+  border-radius: 1rem;
+}
+
+.circulo {
+  width: 8.75rem;
+  height: 8.75rem;
+  border-radius: 50%;
+}
+
+.fms{
+  background: url(../imagenes/fms.jpg) center;
+  background-size: cover;
+}
+
+.palabras {
+  background: url(../imagenes/pal.jpg) center;
+  background-size: cover;
+}
+
+.imagenes {
+  background: url(../imagenes/img.jpg) center;
+  background-size: cover;
+}
+
+.fondo-gris{
+  color:white;
+  background: #444441;
+}
+
+.modos .col-md-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.modos {
+  font-weight: 400;
+}
+.modos .col-md-4 p {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.fuente-navbar{
+  font-family: 'Francois One', sans-serif;
+}
+
+  .mail {
+    position: absolute;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color:#333333;
+    padding-top:0.1rem;
+    padding-bottom:0.1px;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    background-color:#FFD27D;
+    border-color: #FFD27D;
+    border-width: 0.3rem;
+    border-style: solid;
+    border-radius:3rem;
+    right:1rem;
+  }
+
+  .mail:hover{
+    color: black;
+  }
+
+  .achicar{
+    width: 23rem;
+  }
+
+  @media (max-device-width: 900px){
+    .achicar {
+      width: 18rem;
+    }
+    .mail{
+      padding-left:0.5rem;
+      padding-right:0.5rem;
+    }
+  }
+
+  .libre {
+    font-size: 1.3rem;
+    font-family: 'Roboto Slab', serif;
+    background-color: white;
+  }
+
+  @media (max-device-width: 765px){
+    .libre {
+      font-size: 1rem;
+      font-family: 'Roboto Slab', serif;
+      background-color: white;
+    }
+  }
+
+  @media (max-device-width: 580px){
+    .libre {
+      font-size: 0.65rem;
+      font-family: 'Roboto Slab', serif;
+      background-color: white;
+    }
+  }
+
+  .dropdown .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    -ms-transition: all 0.7s ease;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0.5;
+    z-index:1;
+  }

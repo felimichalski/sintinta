@@ -1,0 +1,121 @@
+.cajabeat{
+  height:8rem;
+  width:8rem;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.oscurecer{
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0.5;
+  background-color: #1C1C1B;
+  text-align: center;
+}
+
+.desplegar{
+  display: none;
+  background-color: #461414;
+  border: none;
+  color:white;
+}
+
+.desplegar:hover{
+  color:white;
+}
+
+@media (max-device-width: 768px){
+  .cajabeat{
+    height:5rem;
+    width:5rem;
+  }
+  svg{
+    height:5rem;
+    width:5rem;
+  }
+}
+
+.activo{
+  position: absolute;
+  height:2rem;
+  width:2rem;
+  border-radius: 50%;
+  top:0;
+  left: auto;
+  background:green;
+}
+
+#loufai{
+  background: url(../imagenes/loufai.png) no-repeat center;
+  background-size: cover;
+}
+#enesa{
+  background: url(../imagenes/enesa.png) no-repeat center;
+  background-size: cover;
+}
+#desdeelbarrio{
+  background: url(../imagenes/desdeelbarrio.png) no-repeat center;
+  background-size: cover;
+}
+#freestyle{
+  background: url(../imagenes/freestyle.png) no-repeat center;
+  background-size: cover;
+}
+#hammer{
+  background: url(../imagenes/hammer.png) no-repeat center;
+  background-size: cover;
+}
+#hipocresia{
+  background: url(../imagenes/hipocresia.png) no-repeat center;
+  background-size: cover;
+}
+#moresmoke{
+  background: url(../imagenes/moresmoke.png) no-repeat center;
+  background-size: cover;
+}
+#traficando{
+  background: url(../imagenes/traficando.png) no-repeat center;
+  background-size: cover;
+}
+#underground{
+  background: url(../imagenes/underground.png) no-repeat center;
+  background-size: cover;
+}
+#truenalo{
+  background: url(../imagenes/truenalo.png) no-repeat center;
+  background-size: cover;
+}
+#bigmesita{
+  background: url(../imagenes/bigmesita.png) no-repeat center;
+  background-size: cover;
+}
+#bruja{
+  background: url(../imagenes/bruja.png) no-repeat center;
+  background-size: cover;
+}
+#cebado{
+  background: url(../imagenes/cebado.png) no-repeat center;
+  background-size: cover;
+}
+#imperio{
+  background: url(../imagenes/imperio.png) no-repeat center;
+  background-size: cover;
+}
+#elbarto{
+  background: url(../imagenes/elbarto.png) no-repeat center;
+  background-size: cover;
+}
+#leyendas{
+  background: url(../imagenes/leyendas.png) no-repeat center;
+  background-size: cover;
+}
+#esperanza{
+  background: url(../imagenes/esperanza.png) no-repeat center;
+  background-size: cover;
+}
+#paraustedes{
+  background: url(../imagenes/paraustedes.png) no-repeat center;
+  background-size: cover;
+}
