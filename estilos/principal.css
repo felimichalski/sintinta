@@ -143,9 +143,3 @@ body {
     opacity: 0.5;
     z-index:1;
   }
-
-  footer {
-    position:absolute;
-    height: 100%;
-    bottom: 0;
-  }

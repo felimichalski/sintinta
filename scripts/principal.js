@@ -105,5 +105,8 @@ function frenarBeat() {
   var audios = document.getElementsByTagName("audio");
   for(var i = 0; i < audios.length; i++){
     audios[i].pause();
+    reproduccion = false;
+    var icono = document.getElementById("icono");
+    icono.src = "play.svg";
   }
 }
