@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="es-ES">
   <head>
-   <style>
-     body{
-       background-image: url(imagenes/libre.jpg);
-       background-position: center fixed;
-       background-repeat: no-repeat;
-       background-color: black;
-       background-size: cover;
-     }
-     </style>
+   <link rel="stylesheet" href="estilos/libre.css">
   </head>
   <body>
-    <div class="modolibre"></div>
+    <div class="elegir-beat"></div>
+    <br />
+    <div class="rapear">
+      <div class="cronometro"></div>
+      <br />
+      <div class="justify-content-center align-items-center d-flex">
+        <select id="selector"onchange="cambiarBeat()">
+          <option value="afreestyle">Freestyle - Mad House Music</option>
+          <option value="ahipocresia">Hipocresia - Fiiks Beats</option>
+          <option value="adesdeelbarrio">Desde el barrio - Case G Music</option>
+          <option value="aloufai">Lou Fai - Suriz</option>
+          <option value="ahammer">Hammer - Khronos Beats</option>
+          <option value="atraficando">Traficando Rimas - Mad House Music</option>
+          <option value="amoresmoke">More Smoke - Khronos Beats</option>
+          <option value="aenesa">En esa - Suriz</option>      
+          <option value="aesperanza">Esperanza - Beatmosferah</option>
+          <option value="aunderground">Underground Kings - Case G Music</option>
+          <option value="abigmesita">Big Soto x Mesita Type Beat - Prod. Sosa</option> 
+          <option value="abruja">Bruja - Hanto Beatmaker</option>
+          <option value="acebado">Flow Cebado - Rey Pandora Beats</option>      
+          <option value="aimperio">Imperio - Rapbattle Ens</option>
+          <option value="aelbarto">El Barto - Seven</option>
+          <option value="aleyendas">Leyendas Urbanas - Nerso & Verse</option>
+          <option value="atruenalo">Truenalo - Tavo Rose Beats</option>
+          <option value="aparaustedes">Para Ustedes - Zone Beats</option>
+        </select>
+        <div class="controlador" role="button" onclick="controlarAudio()"><img src="play.svg" id="icono"></div>
+      </div>
+    </div> 
     <script type="text/javascript" src="scripts/libre.js"></script>
   </body>
 </html>

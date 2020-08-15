@@ -33,6 +33,11 @@ function mostrarIncio() {
       $("main").html(data);
     }
   })
+  var audios = document.getElementsByTagName("audio");
+  for(var i = 0; i < audios.length; i++){
+    audios[i].pause();
+    audios[i].currentTime = 0;
+  }
 }
 
 function mostrarBeatmakers() {
@@ -42,6 +47,11 @@ function mostrarBeatmakers() {
       $("main").html(data);
     }
   })
+  var audios = document.getElementsByTagName("audio");
+  for(var i = 0; i < audios.length; i++){
+    audios[i].pause();
+    audios[i].currentTime = 0;
+  }
 }
 
 function mostrarNosotros() {
@@ -51,6 +61,11 @@ function mostrarNosotros() {
       $("main").html(data);
     }
   })
+  var audios = document.getElementsByTagName("audio");
+  for(var i = 0; i < audios.length; i++){
+    audios[i].pause();
+    audios[i].currentTime = 0;
+  }
 }
 
 $(".nav-item").on("click", function(){
@@ -84,4 +99,11 @@ function modoLibre(){
       $("main").html(data);
     }
   })
+}
+
+function frenarBeat() {
+  var audios = document.getElementsByTagName("audio");
+  for(var i = 0; i < audios.length; i++){
+    audios[i].pause();
+  }
 }

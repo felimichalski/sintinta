@@ -1,0 +1,39 @@
+body {
+    background-image: url(../imagenes/libre.jpg);
+    background-position: center fixed;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+  }
+
+  .rapear {
+    display:none;
+  }
+
+  #selector {
+      text-align: center;
+      height:2rem;
+  }
+
+  .cronometro{
+      height: 20rem;
+      width: 20rem;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 50%;
+      background-color: grey;
+      border-width: .4rem;
+      border-style: solid;
+      border-color: black;
+      color: black;
+      font-size:10rem;
+  }
+
+  .controlador {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-color: grey;
+      margin-left: 2rem;
+      margin-right: 2rem;
+  }
