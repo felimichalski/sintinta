@@ -11,8 +11,9 @@ var beat;
 var reproduccion = false;
 
 function irModo() {
-  $(".controlador").hide()
-  $("#selector").hide()
+  $("#selector").hide();
+  $(".controladort").hide();
+  $(".controlador").hide();
   beat = $(".container").find(".activo").parent().attr("id");
   $(".elegir-beat").html("");
   $(".rapear").css("display", "block");
@@ -23,50 +24,31 @@ function irModo() {
   reproduccion = true;
   var icono = document.getElementById("icono");
   icono.src = "pause.svg"
-  for(let i = 5; i > 0; i--) {
-    switch (i){
-      case 5:
-        document.getElementById("cronometro").innerHTML = i;    
-        break;
-      case 4:
-        setTimeout(function(){
-          document.getElementById("cronometro").innerHTML = i;    
-        }, 1000);
-        break;
-      case 3:
-        setTimeout(function(){
-          document.getElementById("cronometro").innerHTML = i;    
-        }, 2000);
-        break;
-      case 2:
-        setTimeout(function(){
-          document.getElementById("cronometro").innerHTML = i;    
-        }, 3000);
-        break;
-      case 1:
-        setTimeout(function(){
-          document.getElementById("cronometro").innerHTML = i;    
-        }, 4000);
-        break;
+  var icono2 = document.getElementById("icono2");
+  icono2.src = "pause.svg"
+  contador = 3;
+  intervalo = window.setInterval(function(){
+    document.getElementById("cronometro").innerHTML = contador;
+    contador--;
+    if(contador === 0){
+      clearInterval(intervalo);
+      cronometrar()
     }
-  }
-  setTimeout(function(){
-    document.getElementById("cronometro").innerHTML = "Rapear";  
-    $(".controlador").show()
-    $("#selector").show()
-  }, 5000)
-  setTimeout(function(){
-    document.getElementById("cronometro").innerHTML = "";  
-  }, 6000)
-
+  }, 1000)
 }
+
 
 function cambiarBeat() {
   beat.pause();
   beat.currentTime = 0;
   var icono = document.getElementById("icono");
-  icono.src = "play.svg"
+  icono.src = "play.svg";
+  var icono2 = document.getElementById("icono2");
+  icono2.src = "play.svg";
   reproduccion = false;
+  clearInterval(intervalo);
+  document.getElementById("cronometro").innerHTML = "";
+  segundos = 1;
   var seleccion = document.getElementById("selector");
   beat = document.getElementById(seleccion.options[seleccion.selectedIndex].value);
 }
@@ -77,11 +59,49 @@ function controlarAudio() {
     reproduccion = true;
     var icono = document.getElementById("icono");
     icono.src = "pause.svg"
+    var icono2 = document.getElementById("icono2");
+    icono2.src = "pause.svg";
+    cronometrar()
   }
   else {
     beat.pause()
     reproduccion = false;
     var icono = document.getElementById("icono");
     icono.src = "play.svg";
+    var icono2 = document.getElementById("icono2");
+    icono2.src = "play.svg";
+    clearInterval(intervalo);
   }
+}
+
+function adelantarBeat() {
+  beat.currentTime += 5;
+}
+
+function atrasarBeat() {
+  beat.currentTime -= 5;
+}
+
+var intervalo;
+var segundos = -1;
+function cronometrar() {
+  setTimeout(function(){
+    $(".controlador").show();
+    $(".controladort").show();
+    $("#selector").show();
+  }, 1000)
+  intervalo = setInterval(function() {
+    if(segundos === -1){
+      document.getElementById("cronometro").innerHTML = "Rapear";
+      segundos++;
+    }
+    else if(segundos === 0){
+      document.getElementById("cronometro").innerHTML = "";
+      segundos++;
+    }
+    else{
+      document.getElementById("cronometro").innerHTML = segundos;
+      segundos++;
+    }
+  }, 1000)
 }

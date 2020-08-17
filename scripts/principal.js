@@ -108,5 +108,8 @@ function frenarBeat() {
     reproduccion = false;
     var icono = document.getElementById("icono");
     icono.src = "play.svg";
+    var icono2 = document.getElementById("icono2");
+    icono2.src = "play.svg";
+    clearInterval(intervalo);
   }
 }

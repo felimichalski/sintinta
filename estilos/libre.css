@@ -21,19 +21,31 @@ body {
       margin-right: auto;
       margin-left: auto;
       border-radius: 50%;
-      background-color: grey;
+      background: url(../imagenes/cronometro.png) center no-repeat;
+      background-size: cover;
       border-width: .4rem;
       border-style: solid;
       border-color: black;
-      color: black;
+      color: white;
       font-size: 5rem;
   }
 
-  .controlador {
+  .controlador{
       height: 3rem;
       width: 3rem;
       border-radius: 50%;
-      background-color: grey;
+      background-color: #333333;
       margin-left: 2rem;
-      margin-right: 2rem;
+      display: flex;
+      justify-content: center;
+  }
+
+  .controladort {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #333333;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
   }

@@ -32,9 +32,19 @@
           <option value="atruenalo">Truenalo - Tavo Rose Beats</option>
           <option value="aparaustedes">Para Ustedes - Zone Beats</option>
         </select>
-        <div class="controlador" role="button" onclick="controlarAudio()"><img src="play.svg" id="icono"></div>
+        <div class="d-none d-md-flex align-items-center">
+          <div class="controladort" role="button" onclick="atrasarBeat()"><img src="anterior.svg"></div>
+          <div class="controlador" role="button" onclick="controlarAudio()"><img src="play.svg" id="icono"></div>
+          <div class="controladort" role="button" onclick="adelantarBeat()"><img src="siguiente.svg"></div>
+        </div>
       </div>
-    </div> 
+      <br />
+      <div class="d-md-none d-flex align-items-center justify-content-center">
+        <div class="controladort" role="button" onclick="atrasarBeat()"><img src="anterior.svg"></div>
+        <div class="controlador" role="button" onclick="controlarAudio()"><img src="play.svg" id="icono2"></div>
+        <div class="controladort" role="button" onclick="adelantarBeat()"><img src="siguiente.svg"></div>
+      </div>
+    </div>
     <script type="text/javascript" src="scripts/libre.js"></script>
   </body>
 </html>
