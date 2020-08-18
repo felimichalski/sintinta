@@ -119,3 +119,7 @@
   background: url(../imagenes/paraustedes.png) no-repeat center;
   background-size: cover;
 }
+
+.col-lg-2, .col-4{
+  margin-bottom: 1rem;
+}

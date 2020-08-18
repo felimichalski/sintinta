@@ -1,0 +1,121 @@
+.creador {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    width: 95%;
+    background-color: #444441;
+    height: 10rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.imagen {
+    height:7.5rem;
+    width:7.5rem;
+    border-radius: 50%;
+    margin-right: 10%;
+}
+
+.nombre {
+    font-size: 1rem;
+    font-family: 'Russo One', sans-serif;
+}
+
+.fiiks{
+    background: url(../imagenes/fiiks.jpg) center;
+    background-size: cover;
+}
+
+.suriz{
+    background: url(../imagenes/suriz.jpg) center;
+    background-size: cover;
+}
+
+.mad{
+    background: url(../imagenes/madhousemusic.jpg) center;
+    background-size: cover;
+}
+
+.case{
+    background: url(../imagenes/case.jpg) center;
+    background-size: cover;
+}
+
+.khronos{
+    background: url(../imagenes/khronos.jpg) center;
+    background-size: cover;
+}
+
+.beatmosferah{
+    background: url(../imagenes/beatmosferah.jpg) center;
+    background-size: cover;
+}
+
+.prod{
+    background: url(../imagenes/prod.jpg) center;
+    background-size: cover;
+}
+
+.hanto{
+    background: url(../imagenes/hanto.jpg) center;
+    background-size: cover;
+}
+
+.zone{
+    background: url(../imagenes/zone.jpg) center;
+    background-size: cover;
+}
+
+.rey{
+    background: url(../imagenes/rey.jpg) center;
+    background-size: cover;
+}
+
+.ens{
+    background: url(../imagenes/ens.jpg) center;
+    background-size: cover;
+}
+
+.nerso{
+    background: url(../imagenes/nerso.jpg) center;
+    background-size: cover;
+}
+
+.seven{
+    background: url(../imagenes/seven.jpg) center;
+    background-size: cover;
+}
+
+.tavo{
+    background: url(../imagenes/tavo.jpg) center;
+    background-size: cover;
+}
+
+.modal-content{
+    background-color:black;
+    color:white;
+}
+
+.close{
+    color:white;
+    position:absolute;
+    right:1rem;
+}
+
+.close:hover{
+    color:white;
+}
+
+.reprod{
+    display: inline-block;
+    height:3rem;
+    width:3rem;
+    margin-right:0.5rem;
+    background-color:white;
+    background-image: url(../play.svg);
+    border-radius: 50%;
+}
+
+.reprod:hover{
+    background-color:grey;
+}

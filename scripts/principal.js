@@ -27,20 +27,26 @@ function ocultarDesplegable() {
 }
 
 function mostrarIncio() {
+  if(intervalo != undefined){
+    clearInterval(intervalo);
+  }
   $.ajax({
     url: "inicio.html",
     success: function(data){
       $("main").html(data);
     }
-  })
+  });
   var audios = document.getElementsByTagName("audio");
-  for(var i = 0; i < audios.length; i++){
-    audios[i].pause();
-    audios[i].currentTime = 0;
-  }
+    for(var i = 0; i < audios.length; i++){
+      audios[i].pause();
+      audios[i].currentTime = 0;
+    }
 }
 
 function mostrarBeatmakers() {
+  if(intervalo != undefined){
+    clearInterval(intervalo);
+  }
   $.ajax({
     url: "beatmakers.html",
     success: function(data){
@@ -55,6 +61,9 @@ function mostrarBeatmakers() {
 }
 
 function mostrarNosotros() {
+  if(intervalo != undefined){
+    clearInterval(intervalo);
+  }
   $.ajax({
     url: "nosotros.html",
     success: function(data){
@@ -113,3 +122,5 @@ function frenarBeat() {
     clearInterval(intervalo);
   }
 }
+
+var intervalo;

@@ -82,7 +82,6 @@ function atrasarBeat() {
   beat.currentTime -= 5;
 }
 
-var intervalo;
 var segundos = -1;
 function cronometrar() {
   setTimeout(function(){
