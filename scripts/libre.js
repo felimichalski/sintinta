@@ -26,15 +26,7 @@ function irModo() {
   icono.src = "pause.svg"
   var icono2 = document.getElementById("icono2");
   icono2.src = "pause.svg"
-  contador = 3;
-  intervalo = window.setInterval(function(){
-    document.getElementById("cronometro").innerHTML = contador;
-    contador--;
-    if(contador === 0){
-      clearInterval(intervalo);
-      cronometrar()
-    }
-  }, 1000)
+  cronometrar();
 }
 
 
@@ -47,7 +39,7 @@ function cambiarBeat() {
   icono2.src = "play.svg";
   reproduccion = false;
   clearInterval(intervalo);
-  document.getElementById("cronometro").innerHTML = "";
+  document.getElementById("cronometro").innerHTML = "0";
   segundos = 1;
   var seleccion = document.getElementById("selector");
   beat = document.getElementById(seleccion.options[seleccion.selectedIndex].value);
@@ -61,7 +53,7 @@ function controlarAudio() {
     icono.src = "pause.svg"
     var icono2 = document.getElementById("icono2");
     icono2.src = "pause.svg";
-    cronometrar()
+    cronometrar();
   }
   else {
     beat.pause()
@@ -74,33 +66,48 @@ function controlarAudio() {
   }
 }
 
+var opciones = $("#selector").find("option");
 function adelantarBeat() {
-  beat.currentTime += 5;
+  for (let i = 0; i < opciones.length; i++) {
+    if($("#selector").prop("selectedIndex") === i){
+      if(i != opciones.length - 1){
+        $("#selector").prop("selectedIndex", i+1);
+        i++;
+      }
+      else {
+        $("#selector").prop("selectedIndex", 0);
+      }
+    }    
+  }
+  cambiarBeat();
 }
 
 function atrasarBeat() {
-  beat.currentTime -= 5;
+  for (let i = opciones.length; i > -1; i--) {
+    if($("#selector").prop("selectedIndex") === i){
+      if(i != 0){
+        $("#selector").prop("selectedIndex", i-1);
+        i--;
+      }
+      else {
+        $("#selector").prop("selectedIndex", opciones.length - 1);
+      }
+    }    
+  }
+  cambiarBeat();
 }
 
-var segundos = -1;
+var segundos = 0;
 function cronometrar() {
-  setTimeout(function(){
-    $(".controlador").show();
-    $(".controladort").show();
-    $("#selector").show();
-  }, 1000)
+  $(".controlador").show();
+  $(".controladort").show();
+  $("#selector").show();
+  if(segundos === 0){
+    document.getElementById("cronometro").innerHTML = segundos;
+    segundos++
+  }
   intervalo = setInterval(function() {
-    if(segundos === -1){
-      document.getElementById("cronometro").innerHTML = "Rapear";
-      segundos++;
-    }
-    else if(segundos === 0){
-      document.getElementById("cronometro").innerHTML = "";
-      segundos++;
-    }
-    else{
-      document.getElementById("cronometro").innerHTML = segundos;
-      segundos++;
-    }
+    document.getElementById("cronometro").innerHTML = segundos;
+    segundos++;
   }, 1000)
 }

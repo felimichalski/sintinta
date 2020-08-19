@@ -13,6 +13,21 @@ body {
   #selector {
       text-align: center;
       height:2rem;
+      background-color: #333333;
+      border: none;
+      color: white;
+      margin-right: 2rem;
+  }
+
+  @media(max-device-width:768px){
+    #selector {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  #selector > option {
+    background-color: #333333;
   }
 
   .cronometro{
@@ -27,7 +42,8 @@ body {
       border-style: solid;
       border-color: black;
       color: white;
-      font-size: 5rem;
+      font-size: 8rem;
+      font-family: 'Do Hyeon', sans-serif;
   }
 
   .controlador{
@@ -36,6 +52,7 @@ body {
       border-radius: 50%;
       background-color: #333333;
       margin-left: 2rem;
+      margin-right: 2rem;
       display: flex;
       justify-content: center;
   }
@@ -45,7 +62,6 @@ body {
     width: 2rem;
     border-radius: 50%;
     background-color: #333333;
-    margin-left: 2rem;
     display: flex;
     justify-content: center;
   }
