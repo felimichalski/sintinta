@@ -67,9 +67,8 @@ body {
   .mail {
     position: absolute;
     text-decoration: none;
-    font-weight: 600;
     font-size: 1rem;
-    font-family: sans-serif;
+    font-family: 'Francois One', sans-serif;
     color:#333333;
     padding-top:0.1rem;
     padding-bottom:0.1px;
