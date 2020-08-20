@@ -110,6 +110,16 @@ function modoLibre(){
   })
 }
 
+function modoPalabras(){
+  $(".navbar-nav").find(".active").removeClass("active");
+ $.ajax({
+   url: "palabras.html",
+   success: function(data){
+     $("main").html(data);
+   }
+ })
+}
+
 function frenarBeat() {
   var audios = document.getElementsByTagName("audio");
   for(var i = 0; i < audios.length; i++){
@@ -124,3 +134,5 @@ function frenarBeat() {
 }
 
 var intervalo;
+var beat;
+var reproduccion = false;

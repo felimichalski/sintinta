@@ -1,3 +1,22 @@
+$("document").ready(function(){
+  $.ajax({
+    url: "beats.html",
+    success: function(data){
+      $(".elegir-beat").html(data);
+    }
+  });
+});
+
+function irModo() {
+  beat = $(".container").find(".activo").parent().attr("id");
+  $(".elegir-beat").html("");
+  beat = "a" + beat;
+  $("#selector").val(beat).prop('selected', true);
+  beat = document.getElementById(beat);
+  var palabra = arrPalabras[Math.floor(Math.random() * 3395) + 1];
+  console.log(beat, palabra);
+}
+
 var arrPalabras = [
       "abalanzar", "abandonado", "abandonar", "abanico", "abarrotar", "abarrotado", "abdomen", "abdominal", "abdicar", "abducción", "abducir",
       "abedul", "abecedario", "abeja", "aberración", "aberrante", "abeto", "abierto", "abismal", "abismo", "abnegar", "abogado", "abofetear", "abolición",

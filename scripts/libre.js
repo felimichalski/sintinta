@@ -7,9 +7,6 @@ $("document").ready(function(){
   });
 });
 
-var beat;
-var reproduccion = false;
-
 function irModo() {
   $("#selector").hide();
   $(".controladort").hide();
