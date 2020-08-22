@@ -27,62 +27,40 @@ function ocultarDesplegable() {
 }
 
 function mostrarIncio() {
-  if(intervalo != undefined){
-    clearInterval(intervalo);
-  }
   $.ajax({
     url: "inicio.html",
     success: function(data){
       $("main").html(data);
     }
   });
-  var audios = document.getElementsByTagName("audio");
-    for(var i = 0; i < audios.length; i++){
-      audios[i].pause();
-      audios[i].currentTime = 0;
-    }
 }
 
 function mostrarBeatmakers() {
-  if(intervalo != undefined){
-    clearInterval(intervalo);
-  }
   $.ajax({
     url: "beatmakers.html",
     success: function(data){
       $("main").html(data);
     }
   })
-  var audios = document.getElementsByTagName("audio");
-  for(var i = 0; i < audios.length; i++){
-    audios[i].pause();
-    audios[i].currentTime = 0;
-  }
 }
 
 function mostrarNosotros() {
-  if(intervalo != undefined){
-    clearInterval(intervalo);
-  }
   $.ajax({
     url: "nosotros.html",
     success: function(data){
       $("main").html(data);
     }
   })
-  var audios = document.getElementsByTagName("audio");
-  for(var i = 0; i < audios.length; i++){
-    audios[i].pause();
-    audios[i].currentTime = 0;
-  }
 }
 
 $(".nav-item").on("click", function(){
+  frenarBeat();
    $(".navbar-nav").find(".active").removeClass("active");
    $(this).addClass("active");
 });
 
 $(".dropdown-item").on("click", function(){
+  frenarBeat();
    $(".navbar-nav").find(".active").removeClass("active");
    switch (this.innerText) {
      case "Inicio":
@@ -125,14 +103,15 @@ function frenarBeat() {
   for(var i = 0; i < audios.length; i++){
     audios[i].pause();
     reproduccion = false;
-    var icono = document.getElementById("icono");
-    icono.src = "play.svg";
-    var icono2 = document.getElementById("icono2");
-    icono2.src = "play.svg";
+  }
+  if(intervalo != undefined){
     clearInterval(intervalo);
   }
+  segundos = 0;
 }
 
 var intervalo;
 var beat;
 var reproduccion = false;
+var segundos = 0;
+var contPalabras;

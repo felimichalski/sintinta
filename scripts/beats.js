@@ -3,7 +3,7 @@ $(".cajabeat").on("click", function(){
   $(".container").find("img").remove();
   var acti = document.createElement("div");
   acti.classList.add("activo");
-  var icono = document.createElement("img");
+  var icono = new Image();
   icono.src = "check.svg";
   $(this).append(acti);
   $(".activo").append(icono);

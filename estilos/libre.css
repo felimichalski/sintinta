@@ -19,7 +19,7 @@ body {
       margin-right: 2rem;
   }
 
-  @media(max-device-width:768px){
+  @media(max-width:768px){
     #selector {
       margin-right: auto;
       margin-left: auto;

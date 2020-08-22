@@ -8,9 +8,6 @@ $("document").ready(function(){
 });
 
 function irModo() {
-  $("#selector").hide();
-  $(".controladort").hide();
-  $(".controlador").hide();
   beat = $(".container").find(".activo").parent().attr("id");
   $(".elegir-beat").html("");
   $(".rapear").css("display", "block");
@@ -94,11 +91,7 @@ function atrasarBeat() {
   cambiarBeat();
 }
 
-var segundos = 0;
 function cronometrar() {
-  $(".controlador").show();
-  $(".controladort").show();
-  $("#selector").show();
   if(segundos === 0){
     document.getElementById("cronometro").innerHTML = segundos;
     segundos++

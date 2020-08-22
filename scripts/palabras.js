@@ -10,12 +10,109 @@ $("document").ready(function(){
 function irModo() {
   beat = $(".container").find(".activo").parent().attr("id");
   $(".elegir-beat").html("");
+  $(".rapear").css("display", "block");
   beat = "a" + beat;
-  $("#selector").val(beat).prop('selected', true);
   beat = document.getElementById(beat);
+  beat.play();
+  reproduccion = true;
+  var icono = document.getElementById("icono");
+  icono.src = "pause.svg"
+  var icono2 = document.getElementById("icono2");
+  icono2.src = "pause.svg"
   var palabra = arrPalabras[Math.floor(Math.random() * 3395) + 1];
-  console.log(beat, palabra);
+  contPalabras.innerHTML = palabra;
+  palabra = palAnterior;
+  cronometrar();
 }
+
+function cambiarBeat() {
+  beat.pause();
+  beat.currentTime = 0;
+  var icono = document.getElementById("icono");
+  icono.src = "play.svg";
+  var icono2 = document.getElementById("icono2");
+  icono2.src = "play.svg";
+  reproduccion = false;
+  clearInterval(intervalo);
+  document.getElementById("cronometro").innerHTML = "0";
+  segundos = 1;
+}
+
+function controlarAudio() {
+  if(reproduccion === false){
+    beat.play()
+    reproduccion = true;
+    var icono = document.getElementById("icono");
+    icono.src = "pause.svg"
+    var icono2 = document.getElementById("icono2");
+    icono2.src = "pause.svg";
+    cronometrar();
+  }
+  else {
+    beat.pause()
+    reproduccion = false;
+    var icono = document.getElementById("icono");
+    icono.src = "play.svg";
+    var icono2 = document.getElementById("icono2");
+    icono2.src = "play.svg";
+    clearInterval(intervalo);
+  }
+}
+
+function adelantarBeat() {
+  cambiarBeat();
+  var audios = document.getElementsByTagName("audio");
+  for (let i = 0; i < audios.length; i++) {
+    if(beat === audios[i]){
+      if(i === audios.length - 1){
+        beat = audios[0];
+      }
+      else {
+        beat = audios[i+1];
+        i++
+      }
+    }
+  }
+}
+
+function atrasarBeat() {
+  cambiarBeat();
+  var audios = document.getElementsByTagName("audio");
+  for (let i = 0; i < audios.length; i++) {
+    if(beat === audios[i]){
+      if(i === 0){
+        beat = audios[audios.length - 1];
+        break;
+      }
+      else {
+        beat = audios[i-1];
+      }
+    }
+  }
+}
+
+function cronometrar() {
+  if(segundos === 0){
+    document.getElementById("cronometro").innerHTML = segundos;
+    segundos++
+  }
+  intervalo = setInterval(function() {
+    document.getElementById("cronometro").innerHTML = segundos;
+    segundos++;
+  }, 1000)
+}
+
+contPalabras = document.getElementById("cont-palabras");
+var palAnterior;
+function cambiarPalabra() {
+  var palabra = arrPalabras[Math.floor(Math.random() * 3395) + 1];
+  if(palabra != palAnterior){
+    contPalabras.innerHTML = palabra;
+  }
+  palabra = palAnterior;
+}
+
+
 
 var arrPalabras = [
       "abalanzar", "abandonado", "abandonar", "abanico", "abarrotar", "abarrotado", "abdomen", "abdominal", "abdicar", "abducción", "abducir",
@@ -178,5 +275,6 @@ var arrPalabras = [
       "El Salvador", "Honduras", "Jamaica", "Perú", "Paraguay", "Uruguay", "Polinesia", "Portugal", "Inglaterra", "Polonia", "Suecia", "Rusia", "China", "Turquía", "Nigeria", "Congo", "Sudáfrica", "India", "Irak", "Irán", "Siria", "Afganistán", "Pakistán", "Tailandia", "Vietnam", "Japón", "Corea", "Marruecos",
       "Babilonia", "Pompeya", "Lisboa", "Madrid", "París", "Londres", "Dublín", "Amsterdam", "Roma", "Milán", "Viena", "Praga", "Atenas", "Estambul", "Moscú", "Chicago", "Washington", "New York", "Los Angeles", "Dallas", "San Francisco", "Tijuana", "La Habana", "Cancún", "Bogotá", "Medellín", "Caracas",
       "Lima", "Río de Janeiro", "Buenos Aires", "Santiago de Chile", "Montevideo", "Ciudad del Cabo", "Nairobi", "El Cairo", "Alejandría", "Dakar", "La Meca", "Bagdad", "Kabul", "Bombay", "Bangkok", "Shanghai", "Tokyo", "Seúl", "Hong Kong", "Sidney", "Melbourne", "Toronto", "Potosí", "Babilonia", "Pompeya",
-      "Mediterráneo", "Groenlandia", "Pirineos", "Andes", "Caribe", "Atlántico", "Índico", "Pacífico", "Sahara", "Amazonas", "Nilo", "Mississippi", "Oceanía", "Mbaka", "Kódigo", "Tata", "Dtoke", "Stigma", "Shakira"
+      "Mediterráneo", "Groenlandia", "Pirineos", "Andes", "Caribe", "Atlántico", "Índico", "Pacífico", "Sahara", "Amazonas", "Nilo", "Mississippi", "Oceanía", "Mbaka", "Kódigo", "Tata", "Dtoke", "Stigma", "Shakira", "Eminem", "Tupac", "Biggie", "Punchline", "Barras", "Flow", "Skills", "Papo", "Chuty", "Dtoke", "Skone",
+      "Aczino", "Jurado", "Misionero", "BeatBox", "Trueno", "Réplica", "Estructuras", "Métricas", "Wos", "Patron"
     ]

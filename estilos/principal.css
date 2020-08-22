@@ -90,7 +90,7 @@ body {
     width: 23rem;
   }
 
-  @media (max-device-width: 900px){
+  @media (max-width: 900px){
     .achicar {
       width: 18rem;
     }
@@ -106,7 +106,7 @@ body {
     background-color: white;
   }
 
-  @media (max-device-width: 765px){
+  @media (max-width: 765px){
     .libre {
       font-size: 1rem;
       font-family: 'Roboto Slab', serif;
@@ -114,7 +114,7 @@ body {
     }
   }
 
-  @media (max-device-width: 580px){
+  @media (max-width: 580px){
     .libre {
       font-size: 0.65rem;
       font-family: 'Roboto Slab', serif;
@@ -148,13 +148,13 @@ body {
   margin-right: 15rem;
   text-align: justify;
 }
-@media (max-device-width: 1100px){
+@media (max-width: 1100px){
   .descripcion {
     margin-left: 10rem;
     margin-right: 10rem;
   }
 }
-@media (max-device-width: 850px){
+@media (max-width: 850px){
   .descripcion {
     margin-left: 5rem;
     margin-right: 5rem;
