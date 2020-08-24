@@ -1,3 +1,21 @@
+function paginaUno() {
+  $("#pag-1").css("display", "flex");
+  $("#pag-2").css("display", "none");
+  $(".pagination").find(".active").removeClass("active");
+  $(".pagination").find(".disabled").removeClass("disabled");
+  $(".pagination").children()[0].classList.add("active");
+  $(".pagination").children()[0].classList.add("disabled");
+}
+
+function paginaDos() {
+  $("#pag-2").css("display", "flex");
+  $("#pag-1").css("display", "none");
+  $(".pagination").find(".active").removeClass("active");
+  $(".pagination").find(".disabled").removeClass("disabled");
+  $(".pagination").children()[1].classList.add("active");
+  $(".pagination").children()[1].classList.add("disabled");
+}
+
 $(".cajabeat").on("click", function(){
   $(".container").find(".activo").removeClass("activo");
   $(".container").find("img").remove();

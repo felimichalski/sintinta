@@ -123,3 +123,18 @@
 .col-lg-2, .col-4{
   margin-bottom: 1rem;
 }
+
+.page-link{
+  background-color:black;
+  color:white;
+  border: none;
+}
+
+.page-item.active .page-link{
+  background-color: white!important;
+  color: black!important;
+}
+
+#pag-2{
+  display:none;
+}

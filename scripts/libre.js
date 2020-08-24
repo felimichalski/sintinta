@@ -8,6 +8,12 @@ $("document").ready(function(){
 });
 
 function irModo() {
+  let posinicial = window.scrollY;
+  if(posinicial != 0){
+    $("body, html").animate({
+      scrollTop: "0px"
+    }, 0)
+  }
   beat = $(".container").find(".activo").parent().attr("id");
   $(".elegir-beat").html("");
   $(".rapear").css("display", "block");
@@ -21,6 +27,9 @@ function irModo() {
   var icono2 = document.getElementById("icono2");
   icono2.src = "pause.svg"
   cronometrar();
+  beat.addEventListener("ended", () => {
+    cambiarBeat();
+  });
 }
 
 

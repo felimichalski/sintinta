@@ -7,7 +7,19 @@ $("document").ready(function(){
   });
 });
 
+$(".controladort").hover(() => {
+  $(".controladores").find(".nombre").removeClass("d-none");
+}, () => {
+  $(".controladores").find(".nombre").addClass("d-none");
+})
+
 function irModo() {
+  let posicioninicial = window.scrollY;
+  if(posicioninicial != 0){
+    $("body, html").animate({
+      scrollTop: "0px"
+    }, 0)
+  }
   beat = $(".container").find(".activo").parent().attr("id");
   $(".elegir-beat").html("");
   $(".rapear").css("display", "block");
@@ -23,6 +35,9 @@ function irModo() {
   contPalabras.innerHTML = palabra;
   palabra = palAnterior;
   cronometrar();
+  beat.addEventListener("ended", () => {
+    cambiarBeat();
+  });
 }
 
 function cambiarBeat() {
