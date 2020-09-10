@@ -4,64 +4,64 @@ body {
     background-repeat: no-repeat;
     background-color: black;
     background-size: cover;
-  }
+}
 
-  .rapear {
-    display:none;
-  }
+.rapear {
+    display: none;
+}
 
-  #selector {
-      text-align: center;
-      height:2rem;
-      background-color: #333333;
-      border: none;
-      color: white;
-      margin-right: 2rem;
-  }
-
-  @media(max-width:768px){
-    #selector {
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
-
-  #selector > option {
+#selector {
+    text-align: center;
+    height: 2rem;
     background-color: #333333;
-  }
+    border: none;
+    color: white;
+    margin-right: 2rem;
+}
 
-  .cronometro{
-      height: 20rem;
-      width: 20rem;
-      margin-right: auto;
-      margin-left: auto;
-      border-radius: 50%;
-      background: url(../imagenes/cronometro.png) center no-repeat;
-      background-size: cover;
-      border-width: .4rem;
-      border-style: solid;
-      border-color: black;
-      color: white;
-      font-size: 8rem;
-      font-family: 'Do Hyeon', sans-serif;
-  }
+@media(max-width:768px) {
+    #selector {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 
-  .controlador{
-      height: 3rem;
-      width: 3rem;
-      border-radius: 50%;
-      background-color: #333333;
-      margin-left: 2rem;
-      margin-right: 2rem;
-      display: flex;
-      justify-content: center;
-  }
+#selector>option {
+    background-color: #333333;
+}
 
-  .controladort {
+.cronometro {
+    height: 20rem;
+    width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    background: url(../imagenes/cronometro.png) center no-repeat;
+    background-size: cover;
+    border-width: .4rem;
+    border-style: solid;
+    border-color: black;
+    color: white;
+    font-size: 8rem;
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+.controlador {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #333333;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.controladort {
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
     background-color: #333333;
     display: flex;
     justify-content: center;
-  }
+}

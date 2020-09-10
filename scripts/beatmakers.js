@@ -12,9 +12,10 @@ function mostrarArtista(e) {
     switch(nombre){
         case "Suriz":
             youtube.href = "https://www.youtube.com/channel/UCusyN7By5cQ9fUXGlSleKUA";
+            instagram.href = "https://www.instagram.com/juansuriz_/"
             youtube.style.display = "";
             spotify.style.display = "none";
-            instagram.style.display = "none";
+            instagram.style.display = "";
             facebook.style.display = "none";
             div.addEventListener("mouseover", function(){
                 let beat = document.getElementById("aloufai");

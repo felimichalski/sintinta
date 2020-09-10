@@ -64,6 +64,15 @@ body {
   font-family: 'Francois One', sans-serif;
 }
 
+.logo {
+  background: url(../imagenes/logo.png) no-repeat;
+  background-size: contain;
+  height: 3.3rem;
+  width: 7rem;
+  position: absolute;
+  top:.2rem;
+}
+
   .mail {
     position: absolute;
     text-decoration: none;

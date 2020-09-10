@@ -1,50 +1,43 @@
-<!DOCTYPE html>
-<html lang="es-ES">
-  <head>
-   <link rel="stylesheet" href="estilos/libre.css">
-  </head>
-  <body>
-    <div class="elegir-beat"></div>
+<link rel="stylesheet" href="estilos/libre.css">
+<div class="elegir-beat"></div>
+<br />
+<br />
+<div class="rapear">
+    <div class="cronometro d-flex align-items-center justify-content-center" id="cronometro"></div>
     <br />
     <br />
-    <div class="rapear">
-      <div class="cronometro d-flex align-items-center justify-content-center" id="cronometro"></div>
-      <br />
-      <br />
-      <div class="justify-content-center align-items-center d-flex">
+    <div class="justify-content-center align-items-center d-flex">
         <select id="selector" onchange="cambiarBeat()">
-          <option value="afreestyle">Freestyle - Mad House Music</option>
-          <option value="ahipocresia">Hipocresia - Fiiks Beats</option>
-          <option value="adesdeelbarrio">Desde el barrio - Case G Music</option>
-          <option value="aloufai">Lou Fai - Suriz</option>
-          <option value="ahammer">Hammer - Khronos Beats</option>
-          <option value="atraficando">Traficando Rimas - Mad House Music</option>
-          <option value="amoresmoke">More Smoke - Khronos Beats</option>
-          <option value="aenesa">En esa - Suriz</option>      
-          <option value="aesperanza">Esperanza - Beatmosferah</option>
-          <option value="aunderground">Underground Kings - Case G Music</option>
-          <option value="abigmesita">Big Soto x Mesita Type Beat - Prod. Sosa</option> 
-          <option value="abruja">Bruja - Hanto Beatmaker</option>
-          <option value="acebado">Flow Cebado - Rey Pandora Beats</option>      
-          <option value="aimperio">Imperio - Rapbattle Ens</option>
-          <option value="aelbarto">El Barto - Seven</option>
-          <option value="aleyendas">Leyendas Urbanas - Nerso & Verse</option>
-          <option value="atruenalo">Truenalo - Tavo Rose Beats</option>
-          <option value="aparaustedes">Para Ustedes - Zone Beats</option>
-        </select>
+      <option value="afreestyle">Freestyle - Mad House Music</option>
+      <option value="ahipocresia">Hipocresia - Fiiks Beats</option>
+      <option value="adesdeelbarrio">Desde el barrio - Case G Music</option>
+      <option value="aloufai">Lou Fai - Suriz</option>
+      <option value="ahammer">Hammer - Khronos Beats</option>
+      <option value="atraficando">Traficando Rimas - Mad House Music</option>
+      <option value="amoresmoke">More Smoke - Khronos Beats</option>
+      <option value="aenesa">En esa - Suriz</option>
+      <option value="aesperanza">Esperanza - Beatmosferah</option>
+      <option value="aunderground">Underground Kings - Case G Music</option>
+      <option value="abigmesita">Big Soto x Mesita Type Beat - Prod. Sosa</option>
+      <option value="abruja">Bruja - Hanto Beatmaker</option>
+      <option value="acebado">Flow Cebado - Rey Pandora Beats</option>
+      <option value="aimperio">Imperio - Rapbattle Ens</option>
+      <option value="aelbarto">El Barto - Seven</option>
+      <option value="aleyendas">Leyendas Urbanas - Nerso & Verse</option>
+      <option value="atruenalo">Truenalo - Tavo Rose Beats</option>
+      <option value="aparaustedes">Para Ustedes - Zone Beats</option>
+    </select>
         <div class="d-none d-md-flex align-items-center">
-          <div class="controladort" role="button" onclick="atrasarBeat()"><img src="anterior.svg"></div>
-          <div class="controlador" role="button" onclick="controlarAudio()"><img src="play.svg" id="icono"></div>
-          <div class="controladort" role="button" onclick="adelantarBeat()"><img src="siguiente.svg"></div>
+            <div class="controladort" role="button" onclick="atrasarBeat()"><img src="anterior.svg"></div>
+            <div class="controlador" role="button" onclick="controlarAudio()"><img src="play.svg" id="icono"></div>
+            <div class="controladort" role="button" onclick="adelantarBeat()"><img src="siguiente.svg"></div>
         </div>
-      </div>
-      <br />
-      <div class="d-md-none d-flex align-items-center justify-content-center">
+    </div>
+    <br />
+    <div class="d-md-none d-flex align-items-center justify-content-center">
         <div class="controladort" role="button" onclick="atrasarBeat()"><img src="anterior.svg"></div>
         <div class="controlador" role="button" onclick="controlarAudio()"><img src="play.svg" id="icono2"></div>
         <div class="controladort" role="button" onclick="adelantarBeat()"><img src="siguiente.svg"></div>
-      </div>
     </div>
-    <script type="text/javascript" src="scripts/libre.js"></script>
-  </body>
-</html>
+</div>
+<script type="text/javascript" src="scripts/libre.js"></script>
